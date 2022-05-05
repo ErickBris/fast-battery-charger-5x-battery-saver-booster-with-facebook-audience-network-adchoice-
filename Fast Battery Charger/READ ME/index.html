@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Fast Battery Charger and Saver</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Fast Battery Charger and Saver&rdquo; Documentation by &ldquo;App Wizard&rdquo; v1.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Fast Battery Charger and Saver&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 27/10/2016<br>
+					By: App Wizard<br>
+					Email: <a href="mailto:divyesh.tarsariya@gmail.com">divyesh.tarsariya@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my android application. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="https://codecanyon.net/user/appwizard">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#fastchargeractivity">Fast Charger Activity</a></li>
+			<li><a href="#mainactivity">Main Activity</a></li>
+			<li><a href="#facebookauidence">Facebook Audience Network</a></li>
+			<li><a href="#publishgoogle">Publish App on Google Play</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="fastchargeractivity"><strong>A) Fast Charger Activity</strong> - <a href="#toc">top</a></h3>
+		
+		<img src="assets/images/Screenshot1.jpg" alt="Fast Charger Activity" />
+		
+		<p><b>1.Background :</b> res > drawable > background.xml</p>
+
+<pre>
+        android:angle="135"
+        android:centerColor="#11927e"
+        android:endColor="#0a5193"
+        android:startColor="#109060"</pre>
+		
+		<p><b>2.Card Color :</b> res > values > color.xml</p>
+
+<pre>name="cardcolor"</pre>
+
+		<p>Replace color value with #AARRGGBB or #RRGGBB</p>
+		
+		<p><b>3.Battery-Color :</b> src > main > java > fast.battery.charger.app > FastCharger.java</p>
+
+<pre>
+Line 296 : waveProgressView.setText("#4D000000", 70);
+Line 297 : waveProgressView.setWaveColor("#4D76FF03");
+</pre>
+
+		<p>Replace color and size for change battery level text : waveProgressView.setText("YOUR COLOR", TEXT SIZE);</p>
+<p>Replace wave color for change battery wave : waveProgressView.setWaveColor("YOUR COLOR");</p>
+
+<p><b>4.Icon :</b> res > drawable > ic_tool_*.png</p>
+
+		<p>Replace current tools icon with your new icon</p>
+		
+		
+<p><b>5.Button Start fast charger :</b> res > drawable > ic_button.9.png & res > drawable > ic_button_press.9.png</p>
+
+		<p>Replace current image icon with your new image </p>
+		<p>Please prefer this link for know about 9 patch image : <a href="https://developer.android.com/studio/write/draw9patch.html">https://developer.android.com/studio/write/draw9patch.html</a> </p>
+		<p>Please prefer this tool to create 9 patch image : <a href="https://romannurik.github.io/AndroidAssetStudio/nine-patches.html">https://romannurik.github.io/AndroidAssetStudio/nine-patches.html</a> </p>
+		
+<hr>
+		
+		
+				<h3 id="mainactivity"><strong>B) Main Activity</strong> - <a href="#toc">top</a></h3>
+		
+		<img src="assets/images/Screenshot2.jpg" alt="Main Activity" />
+		
+		<p><b>1.Circle Progress View :</b> res > layout-large,layout-normal,layout-xlarge > activity_main.xml</p>
+
+<pre>
+app:arc_bottom_text_color="@color/White"
+app:arc_finished_color="@color/White"
+app:arc_stroke_width="10dp"
+app:arc_text_color="@color/White"
+app:arc_unfinished_color="@color/WhiteAlpha"</pre>
+		
+		<p>Replace color value in res > values > color.xml</p>
+		
+		<hr>
+
+		
+		<h3 id="facebookauidence"><strong>C) Facebook Audience Network</strong> - <a href="#toc">top</a></h3>
+		
+		<p>Please prefer this tutorial to create facebook audience network ad ID : <a href="https://developers.facebook.com/docs/audience-network/getting-started">https://developers.facebook.com/docs/audience-network/getting-started</a> </p>
+
+		<p><b>1.Facebook Audience Network Ad ID :</b> res > values > string.xml</p>
+
+		<pre>
+    Ad_About_Activity_banner : PUT_AD_ID_HERE
+    Ad_Battery_Detail_Activity_banner : PUT_AD_ID_HERE
+    Ad_Close_All_Tools_banner : PUT_AD_ID_HERE
+    Ad_FastCharger_banner : PUT_AD_ID_HERE
+    Ad_Licence_banner : PUT_AD_ID_HERE
+    Ad_Setting_banner : PUT_AD_ID_HERE
+    Ad_About_Activity_native : PUT_AD_ID_HERE
+    Ad_Close_All_Tools_native : PUT_AD_ID_HERE
+    Ad_Fast_Charger_native : PUT_AD_ID_HERE
+    Ad_Main_Activity_native : PUT_AD_ID_HERE
+    Ad_Main_Activity_Int : PUT_AD_ID_HERE</pre>
+	
+	<h3 id="publishgoogle"><strong>C) Publish App on Google Play</strong> - <a href="#toc">top</a></h3>
+		
+		<p>Please prefer this tutorial to Publish App on Google Play : <a href="https://developer.android.com/distribute/googleplay/start.html">https://developer.android.com/distribute/googleplay/start.html</a> </p>
+		
+		<hr>
+		<p>Once again, thank you so much for purchasing this Application. As I said at the beginning, I'd be glad to help you if you have any questions relating to this Application. No guarantees, but I'll do my best to assist. If you have a more general question relating to the Application on CodeCanyon, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>App Wizard</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
